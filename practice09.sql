@@ -8,6 +8,7 @@ from professor
 where deptno = 201;
 
 select
+
 empno,
 ename,
 comm,
@@ -16,3 +17,10 @@ from emp
 where deptno = 30;
 
 select *From emp;
+
+select
+pay*12+ nvl(bonus, 0),
+
+
+
+
