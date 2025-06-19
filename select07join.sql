@@ -148,6 +148,8 @@ select *
 from emp e1, emp e2
 where e1.mgr = e2.empno;
 
+select * from emp2;
+
 select a.empno 내사번, a.name 내이름, a.pempno 상사사번, b.name 상사이름 
 from emp2 a, emp2 b
 where a.pempno = b.empno;
