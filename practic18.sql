@@ -24,3 +24,36 @@ WHERE hiredate > (SELECT hiredate
                     WHERE name = 'Meg Ryan') --85/09/18
     AND p.deptno = d.deptno
 ORDER BY hiredate;
+
+select * from emp2;
+select * from dept2;
+
+
+
+select name, weight
+from student
+where weight > (select avg(weight)
+                from student
+                where deptno1 =201);
+                
+select empno, name, deptno
+from emp2
+where deptno in (select dcode
+                from dept2
+                where area = 'Pohang Main Office');
+
+select empno, name, deptno
+from emp2 e, dept2 d
+where e.deptno = d.dcode
+and d.area = 'Pohang Main Office';
+
+select empno, name, deptno
+from emp2 e, (select dcode
+               from dept2
+               where area = 'Pohang Main Office') d
+where e.deptno = d.dcode;
+
+
+
+
+
